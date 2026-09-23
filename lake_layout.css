@@ -1,0 +1,83 @@
+﻿@charset "utf-8";
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 2
+   Case Problem 4
+   
+   The Great Lakescape Lodge Layout Styles
+   Filename: lake_layout.css
+*/
+/* Structural Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+    min-width: 500px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap:0;
+}
+
+body > header {
+    grid-column: 1 / -1;
+}
+body > footer {
+    grid-column: 1 / -1;
+}
+
+body > header > img {
+    width: 100%;
+    display: block;
+    margin: 0;
+}
+
+header > nav > ul {
+    display: flex;
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
+header > nav > ul > li {
+    flex: 1;
+    text-align:center;
+}
+header > nav a {
+    display: block;
+    width: 100%;
+}
+
+section#leftcol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows:fit-content;
+    padding-left: 0%;
+    padding-right: 0%;
+}
+section#leftcol > h1 {
+    padding-left: 12px;
+    padding-right: 12px;
+    grid-column: 1 / -1 !important;
+}
+
+section#leftcol > p {
+    padding-left: 12px;
+    padding-right: 12px;
+    grid-column: 1 / -1 !important;
+}
+
+section#leftcol > img {
+    grid-column: 1 / -1 !important;
+    margin-left: 0!important;
+    margin-right: 0!important;
+    display: block;
+    width: 100%;
+    margin-bottom:16px;
+}
+
+footer {
+    margin-top:1rem;
+}
